@@ -10,7 +10,7 @@ public class UndefeatedChampion  {
     public static void main(String[] args) {
         while (true) {
             System.out.print("Input command:");
-            String line = sc.nextLine();
+            String line = sc.nextLine().trim();
             String[] parts = line.split("\\s+");
 
             if (parts[0].equals("exit")) {
@@ -129,7 +129,8 @@ public class UndefeatedChampion  {
     public static void userMove(char[][] board, char symbol) {
         while (true) {
             System.out.print("Enter the coordinates:");
-            String[] nums = sc.nextLine().split("\\s+");
+            String line= sc.nextLine().trim();
+            String[] nums = line.split("\\s+");
 
             if (nums.length != 2) {
                 System.out.println("You should enter numbers!");
